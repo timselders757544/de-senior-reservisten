@@ -71,7 +71,7 @@ export default function Home() {
 
           <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a href="/blog" className="btn-primary">
-              Lees het verhaal
+              Naar de verkenning
             </a>
             <a href="/over" className="btn-primary bg-primary-light hover:bg-primary">
               Over dit experiment

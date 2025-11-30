@@ -3,8 +3,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Het Verhaal',
-  description: 'Live documentatie van twee 55+ professionals die het wervingsproces van Defensie ingaan. Transparant, ongefiltreerd en publiek.',
+  title: 'De Verkenning',
+  description: 'Twee professionals van 55+ gaan het wervingsproces van Defensie in. Live documentatie van wat we tegenkomen — ongefiltreerd en transparant.',
 }
 
 // Revalidate elke 60 seconden voor verse content
@@ -16,10 +16,10 @@ export default async function Blog() {
   return (
     <div className="container-content">
       <div className="prose prose-lg max-w-none">
-        <h1 className="text-primary">Het Verhaal</h1>
+        <h1 className="text-primary">De Verkenning</h1>
         <p className="text-xl text-neutral-700">
           Twee professionals van 55+ gaan het wervingsproces van Defensie in.
-          Dit is een live documentatie van dat experiment — ongefiltreerd en transparant.
+          Dit is een live documentatie van wat we tegenkomen — ongefiltreerd en transparant.
         </p>
       </div>
 

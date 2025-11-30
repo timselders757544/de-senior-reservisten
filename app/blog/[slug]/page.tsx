@@ -71,7 +71,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             href="/blog"
             className="btn-primary inline-block"
           >
-            ← Terug naar het verhaal
+            ← Terug naar de verkenning
           </Link>
         </footer>
       </article>
