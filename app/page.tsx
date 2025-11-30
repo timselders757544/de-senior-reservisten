@@ -31,16 +31,16 @@ export default function Home() {
 
         {/* Tekst in het midden */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+          <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
             DE SENIOR RESERVISTEN
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-normal">
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-snug">
             150.000 open vacatures,
           </p>
-          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-normal">
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-snug">
             2 mannen op leeftijd,
           </p>
-          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-normal">
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-snug">
             1 intentie, 0 pretenties.
           </p>
         </div>
