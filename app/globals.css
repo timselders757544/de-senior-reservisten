@@ -1,0 +1,63 @@
+/* Import design tokens from design-system */
+@import '../../design-system/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply leading-relaxed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans leading-tight;
+  }
+
+  h1 {
+    @apply text-4xl font-bold mb-4;
+  }
+
+  h2 {
+    @apply text-3xl font-bold mb-3;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold mb-2;
+  }
+
+  p {
+    @apply mb-4 text-base;
+  }
+
+  a {
+    @apply text-accent hover:text-accent-light transition-colors;
+  }
+
+  blockquote {
+    @apply border-l-4 border-accent bg-neutral-200 py-4 px-6 my-6 italic;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white px-6 py-3 rounded font-sans font-semibold uppercase tracking-wide text-sm hover:bg-accent-light transition-colors inline-block;
+  }
+
+  .container-content {
+    @apply max-w-2xl mx-auto px-6 py-12;
+  }
+
+  /* Direct CSS variable usage - bypassing Tailwind */
+  .dsr-theme {
+    /* Deze klassen gebruiken direct de design tokens */
+    --color-primary: var(--dsr-color-primary);
+    --color-accent: var(--dsr-color-accent);
+    --font-heading: var(--dsr-font-heading);
+    --font-body: var(--dsr-font-body);
+  }
+}

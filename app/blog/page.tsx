@@ -1,0 +1,52 @@
+import { getAllPosts } from '@/lib/posts'
+import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Het Verhaal',
+  description: 'Live documentatie van twee 55+ professionals die het wervingsproces van Defensie ingaan. Transparant, ongefiltreerd en publiek.',
+}
+
+export default function Blog() {
+  const posts = getAllPosts()
+
+  return (
+    <div className="container-content">
+      <div className="prose prose-lg max-w-none">
+        <h1 className="text-primary">Het Verhaal</h1>
+        <p className="text-xl text-neutral-700">
+          Twee professionals van 55+ gaan het wervingsproces van Defensie in.
+          Dit is een live documentatie van dat experiment — ongefiltreerd en transparant.
+        </p>
+      </div>
+
+      <div className="mt-12 space-y-8">
+        {posts.length === 0 ? (
+          <div className="bg-neutral-100 p-8 rounded text-center">
+            <p className="text-neutral-600">
+              Het eerste hoofdstuk wordt momenteel geschreven...
+            </p>
+          </div>
+        ) : (
+          posts.map((post) => (
+            <article key={post.slug} className="border-l-4 border-primary pl-6 py-2">
+              <time className="text-sm text-neutral-600">{post.date}</time>
+              <h2 className="text-2xl font-heading font-bold text-primary mt-2 mb-3">
+                <Link href={`/blog/${post.slug}`} className="hover:text-accent transition-colors">
+                  {post.title}
+                </Link>
+              </h2>
+              <p className="text-neutral-700 text-lg mb-4">{post.excerpt}</p>
+              <Link
+                href={`/blog/${post.slug}`}
+                className="text-accent hover:text-primary font-semibold transition-colors"
+              >
+                Lees verder →
+              </Link>
+            </article>
+          ))
+        )}
+      </div>
+    </div>
+  )
+}
