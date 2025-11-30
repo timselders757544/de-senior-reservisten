@@ -2,101 +2,80 @@
 
 **150.000 open vacatures, 2 mannen op leeftijd, 1 intentie, 0 pretenties.**
 
-Een live experiment: wat gebeurt er als twee professionals van 55+ het wervingsproces van Defensie ingaan?
+Live documentatie van twee professionals van 55+ die het wervingsproces van Defensie ingaan.
+
+**Website:** [deseniorreservisten.nl](https://deseniorreservisten.nl)
+
+## Tech Stack
+
+- **Next.js 16** - React framework
+- **Tailwind CSS** - Utility-first CSS
+- **TypeScript** - Type-safe JavaScript
+- **Notion** - CMS voor blogposts
+- **Vercel** - Hosting & deployment
 
 ## Lokaal Draaien
 
 ```bash
-cd /Volumes/DevSSD/Development/de-senior-reservisten
+npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in je browser.
+Open [http://localhost:3000](http://localhost:3000)
 
-## Tech Stack
+### Environment Variables
 
-- **Next.js 14** - React framework met static export
-- **Tailwind CSS** - Utility-first CSS
-- **TypeScript** - Type-safe JavaScript
-- **Google Fonts** - Space Grotesk (headers) + Source Serif Pro (body)
+Maak `.env.local` aan:
+
+```
+NOTION_API_KEY=secret_xxx
+NOTION_DATABASE_ID=xxx
+```
 
 ## Project Structuur
 
 ```
 de-senior-reservisten/
 ├── app/
-│   ├── layout.tsx          # Hoofd layout met navigatie
-│   ├── globals.css         # Tailwind + custom styles
-│   └── page.tsx            # Homepage
-├── components/             # Herbruikbare componenten (TODO)
-├── content/
-│   └── blog/              # Markdown blogposts (TODO)
+│   ├── components/       # React componenten (MobileNav)
+│   ├── blog/            # Blog overzicht + detail pagina's
+│   ├── over/            # Over ons pagina
+│   ├── contact/         # Contact pagina
+│   ├── layout.tsx       # Hoofd layout met navigatie
+│   ├── globals.css      # Tailwind + custom styles
+│   └── page.tsx         # Homepage
+├── lib/
+│   └── notion.ts        # Notion API integratie
 ├── public/
-│   └── images/            # Afbeeldingen
-└── tailwind.config.js     # Design system configuratie
+│   └── images/          # Hero afbeeldingen
+└── tailwind.config.js   # Design system configuratie
 ```
 
 ## Design System
 
 ### Kleuren
 
-- **Primary**: `#1a2744` (marineblauw) - autoriteit, structuur
-- **Accent**: `#e07a2f` (oranje) - energie, disruptie
-- **Neutral**: Grijs tinten voor achtergrond en tekst
+- **Primary**: `#1a2744` (marineblauw)
+- **Accent**: `#e07a2f` (oranje)
+- **Neutral**: Grijs tinten
 
 ### Typografie
 
-- **Headers**: Space Grotesk (scherp, modern)
-- **Body**: Source Serif Pro (leesbaarheid)
-- **Mono**: JetBrains Mono (code/tech)
-
-## Volgende Stappen
-
-- [ ] Blog overzichtspagina bouwen
-- [ ] Markdown/MDX setup voor blogposts
-- [ ] Individuele blogpost template
-- [ ] Over-pagina met volledige tekst
-- [ ] Contact-pagina
-- [ ] 3-5 voorbeeld blogposts uit briefing
-- [ ] SEO optimalisatie
-- [ ] Deployment naar Vercel
-
-## Development
-
-```bash
-# Ontwikkelen (met hot reload)
-npm run dev
-
-# Bouwen voor productie
-npm run build
-
-# Static export genereren
-npm run export
-```
+- **Headers**: Space Grotesk
+- **Body**: Source Serif Pro
 
 ## Deployment
 
-Dit project is geconfigureerd voor static export, perfect voor Vercel:
+Automatisch via Vercel bij push naar `main` branch.
 
-1. Push naar GitHub repository
-2. Koppel repository aan Vercel
-3. Vercel detecteert automatisch Next.js
-4. Done!
+## Content Beheer
 
-Of handmatig:
+Blogposts worden beheerd in Notion. Elke post heeft:
+- Titel
+- Slug (URL)
+- Datum
+- Auteur
+- Samenvatting
+- Status (Published/Draft)
 
-```bash
-npm run build
-# Upload 'out' folder naar hosting
-```
-
-## Domein
-
-Domein wordt: **www.deseniorreservisten.nl** (nog niet geregistreerd)
-
-## Notities
-
-- Alle content in Nederlands
-- Geen analytics (eerste versie)
-- Geen reacties (eerste versie)
-- Focus op verhaal vertellen, niet op features
+Alleen posts met status "Published" worden getoond.
