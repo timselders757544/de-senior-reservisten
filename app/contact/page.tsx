@@ -52,7 +52,7 @@ export default function Contact() {
 
         <p className="mt-6">
           <a
-            href="mailto:reservist@timselders.nl?subject=Contact via De Senior Reservisten"
+            href="mailto:tim@timselders.nl?subject=Contact via De Senior Reservisten"
             className="btn-primary inline-block"
           >
             Stuur ons een e-mail
