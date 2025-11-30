@@ -1,4 +1,4 @@
-import { getAllPosts } from '@/lib/posts'
+import { getPublishedPosts } from '@/lib/notion'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -7,8 +7,11 @@ export const metadata: Metadata = {
   description: 'Live documentatie van twee 55+ professionals die het wervingsproces van Defensie ingaan. Transparant, ongefiltreerd en publiek.',
 }
 
-export default function Blog() {
-  const posts = getAllPosts()
+// Revalidate elke 60 seconden voor verse content
+export const revalidate = 60
+
+export default async function Blog() {
+  const posts = await getPublishedPosts()
 
   return (
     <div className="container-content">
@@ -30,13 +33,22 @@ export default function Blog() {
         ) : (
           posts.map((post) => (
             <article key={post.slug} className="border-l-4 border-primary pl-6 py-2">
-              <time className="text-sm text-neutral-600">{post.date}</time>
+              <time className="text-sm text-neutral-600">
+                {post.date ? new Date(post.date).toLocaleDateString('nl-NL', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                }) : ''}
+              </time>
+              {post.author && (
+                <span className="text-sm text-neutral-500 ml-2">• {post.author}</span>
+              )}
               <h2 className="text-2xl font-heading font-bold text-primary mt-2 mb-3">
                 <Link href={`/blog/${post.slug}`} className="hover:text-accent transition-colors">
                   {post.title}
                 </Link>
               </h2>
-              <p className="text-neutral-700 text-lg mb-4">{post.excerpt}</p>
+              <p className="text-neutral-700 text-lg mb-4">{post.summary}</p>
               <Link
                 href={`/blog/${post.slug}`}
                 className="text-accent hover:text-primary font-semibold transition-colors"

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Removed 'output: export' - nu server-side rendering voor Notion integratie
   images: { unoptimized: true },
 }
 
