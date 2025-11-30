@@ -31,16 +31,16 @@ export default function Home() {
 
         {/* Tekst in het midden */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
             DE SENIOR RESERVISTEN
           </h1>
-          <p className="text-base md:text-2xl lg:text-3xl text-neutral-200 font-sans">
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans">
             150.000 open vacatures,
           </p>
-          <p className="text-base md:text-2xl lg:text-3xl text-neutral-200 font-sans">
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans">
             2 mannen op leeftijd,
           </p>
-          <p className="text-base md:text-2xl lg:text-3xl text-neutral-200 font-sans">
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans">
             1 intentie, 0 pretenties.
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* Main Content */}
       <section className="container-content">
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-base md:prose-lg max-w-none">
           <h2 className="text-primary">Defensie zoekt mensen. Wij melden ons.</h2>
 
           <p>
