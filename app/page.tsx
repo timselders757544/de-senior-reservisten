@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-primary to-primary-light text-white py-12 md:py-20 px-4 md:px-6 overflow-hidden min-h-[250px] md:min-h-[500px]">
+      <section className="relative bg-gradient-to-b from-primary to-primary-light text-white py-8 md:py-20 px-4 md:px-6 overflow-hidden md:min-h-[500px]">
         {/* Linker figuur - burger Tim - uitgelijnd aan onderkant section */}
         <div className="hidden md:block absolute bottom-0 left-[calc(50%-630px)] w-[336px] lg:w-[420px]">
           <Image
@@ -31,13 +31,16 @@ export default function Home() {
 
         {/* Tekst in het midden */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
             DE SENIOR RESERVISTEN
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans">
-            150.000 open vacatures, 2 mannen op leeftijd,
+          <p className="text-base md:text-2xl lg:text-3xl text-neutral-200 font-sans">
+            150.000 open vacatures,
           </p>
-          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans">
+          <p className="text-base md:text-2xl lg:text-3xl text-neutral-200 font-sans">
+            2 mannen op leeftijd,
+          </p>
+          <p className="text-base md:text-2xl lg:text-3xl text-neutral-200 font-sans">
             1 intentie, 0 pretenties.
           </p>
         </div>

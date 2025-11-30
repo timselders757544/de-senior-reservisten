@@ -59,7 +59,7 @@ export default function MobileNav() {
 
       {/* Mobiel menu - dropdown */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-primary border-t border-primary-light">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-primary border-t border-primary-light z-50 shadow-lg">
           <div className="flex flex-col py-2">
             {navLinks.map((link) => (
               <a
