@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary to-primary-light text-white py-20 px-6 overflow-hidden min-h-[400px] md:min-h-[500px]">
         {/* Linker figuur - burger Tim - uitgelijnd aan onderkant section */}
-        <div className="hidden md:block absolute bottom-0 left-[calc(50%-580px)] w-[336px] lg:w-[420px]">
+        <div className="hidden md:block absolute bottom-0 left-[calc(50%-630px)] w-[336px] lg:w-[420px]">
           <Image
             src="/images/burger-tim.png"
             alt="Tim in burgerkledij"
@@ -18,7 +18,7 @@ export default function Home() {
         </div>
 
         {/* Rechter figuur - reservist Tim - uitgelijnd aan onderkant section */}
-        <div className="hidden md:block absolute bottom-0 right-[calc(50%-580px)] w-[336px] lg:w-[420px]">
+        <div className="hidden md:block absolute bottom-0 right-[calc(50%-630px)] w-[336px] lg:w-[420px]">
           <Image
             src="/images/reservist-tim.png"
             alt="Tim in reservistenuniform"
