@@ -17,7 +17,7 @@ export default function MobileNav() {
       {/* Hamburger button - alleen zichtbaar op mobiel */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden p-2 -mr-2"
+        className="md:hidden p-2 -mr-2 text-accent"
         aria-label="Menu openen"
       >
         <svg
