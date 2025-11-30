@@ -74,7 +74,7 @@ export default function Home() {
               Naar de verkenning
             </a>
             <a href="/over" className="btn-primary bg-primary-light hover:bg-primary">
-              Over dit experiment
+              Over ons
             </a>
           </div>
         </div>

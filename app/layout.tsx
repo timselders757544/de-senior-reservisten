@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl" className={`${spaceGrotesk.variable} ${sourceSerif.variable}`}>
-      <body className="font-serif bg-neutral-100 text-neutral-900">
+      <body className="font-serif bg-primary-light text-neutral-900">
         <header className="bg-primary text-white py-3 md:py-4 px-4 md:px-6 relative">
           <nav className="max-w-6xl mx-auto flex justify-between items-center">
             <a href="/" className="font-sans text-base md:text-xl font-bold hover:text-accent transition">
@@ -47,12 +47,11 @@ export default function RootLayout({
             <MobileNav />
           </nav>
         </header>
-        <main>{children}</main>
-        <footer className="bg-primary-light text-white py-8 mt-16">
+        <main className="bg-neutral-100">{children}</main>
+        <footer className="bg-primary-light text-white py-8">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <p className="font-sans text-sm">DE SENIOR RESERVISTEN</p>
-            <p className="text-neutral-300 text-sm mt-2">Een experiment in publiek leren.</p>
-            <p className="text-neutral-300 text-xs mt-4">© 2024</p>
+            <p className="text-neutral-300 text-xs mt-4">© 2025</p>
           </div>
         </footer>
       </body>

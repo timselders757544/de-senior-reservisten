@@ -40,6 +40,16 @@
   }
 }
 
+@layer base {
+  /* Fix: prose-lg list items zelfde grootte, regelafstand en spacing als paragrafen */
+  .prose-lg li {
+    font-size: 1.125rem;
+    line-height: 1.778;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 @layer components {
   .btn-primary {
     @apply bg-accent text-white px-6 py-3 rounded font-sans font-semibold uppercase tracking-wide text-sm hover:bg-accent-light transition-colors inline-block;
