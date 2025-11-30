@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-primary to-primary-light text-white py-20 px-6 overflow-hidden min-h-[400px] md:min-h-[500px]">
+      <section className="relative bg-gradient-to-b from-primary to-primary-light text-white py-12 md:py-20 px-4 md:px-6 overflow-hidden min-h-[250px] md:min-h-[500px]">
         {/* Linker figuur - burger Tim - uitgelijnd aan onderkant section */}
         <div className="hidden md:block absolute bottom-0 left-[calc(50%-630px)] w-[336px] lg:w-[420px]">
           <Image
@@ -70,7 +70,7 @@ export default function Home() {
             om ons te vinden.
           </p>
 
-          <div className="mt-12 flex gap-4">
+          <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a href="/blog" className="btn-primary">
               Lees het verhaal
             </a>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, Source_Serif_4 } from 'next/font/google'
 import './globals.css'
+import MobileNav from './components/MobileNav'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -38,15 +39,12 @@ export default function RootLayout({
   return (
     <html lang="nl" className={`${spaceGrotesk.variable} ${sourceSerif.variable}`}>
       <body className="font-serif bg-neutral-100 text-neutral-900">
-        <header className="bg-primary text-white py-4 px-6">
+        <header className="bg-primary text-white py-3 md:py-4 px-4 md:px-6 relative">
           <nav className="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 className="font-sans text-xl font-bold">DE SENIOR RESERVISTEN</h1>
-            <div className="flex gap-6 text-sm">
-              <a href="/" className="hover:text-accent transition">Home</a>
-              <a href="/blog" className="hover:text-accent transition">Het Verhaal</a>
-              <a href="/over" className="hover:text-accent transition">Over</a>
-              <a href="/contact" className="hover:text-accent transition">Contact</a>
-            </div>
+            <a href="/" className="font-sans text-base md:text-xl font-bold hover:text-accent transition">
+              DE SENIOR RESERVISTEN
+            </a>
+            <MobileNav />
           </nav>
         </header>
         <main>{children}</main>
