@@ -34,13 +34,13 @@ export default function Home() {
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
             DE SENIOR RESERVISTEN
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans">
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-normal">
             150.000 open vacatures,
           </p>
-          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans">
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-normal">
             2 mannen op leeftijd,
           </p>
-          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans">
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-normal">
             1 intentie, 0 pretenties.
           </p>
         </div>
