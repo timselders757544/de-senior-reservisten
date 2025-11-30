@@ -5,34 +5,32 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary to-primary-light text-white py-20 px-6 overflow-hidden min-h-[400px] md:min-h-[500px]">
-        {/* Container voor content + figuren */}
-        <div className="relative max-w-6xl mx-auto">
-          {/* Linker figuur - burger Tim - vastgezet onder "SENIOR" */}
-          <div className="hidden md:block absolute left-0 bottom-0 w-[280px] lg:w-[350px] translate-y-[80px]">
-            <Image
-              src="/images/burger-tim.png"
-              alt="Tim in burgerkledij"
-              width={800}
-              height={1000}
-              className="w-full h-auto object-contain object-bottom"
-              priority
-            />
-          </div>
+        {/* Linker figuur - burger Tim - uitgelijnd aan onderkant section */}
+        <div className="hidden md:block absolute bottom-0 left-[calc(50%-580px)] w-[280px] lg:w-[350px]">
+          <Image
+            src="/images/burger-tim.png"
+            alt="Tim in burgerkledij"
+            width={800}
+            height={1000}
+            className="w-full h-auto object-contain object-bottom"
+            priority
+          />
+        </div>
 
-          {/* Rechter figuur - reservist Tim - vastgezet onder "Over" */}
-          <div className="hidden md:block absolute right-0 bottom-0 w-[280px] lg:w-[350px] translate-y-[80px]">
-            <Image
-              src="/images/reservist-tim.png"
-              alt="Tim in reservistenuniform"
-              width={800}
-              height={1000}
-              className="w-full h-auto object-contain object-bottom"
-              priority
-            />
-          </div>
+        {/* Rechter figuur - reservist Tim - uitgelijnd aan onderkant section */}
+        <div className="hidden md:block absolute bottom-0 right-[calc(50%-580px)] w-[280px] lg:w-[350px]">
+          <Image
+            src="/images/reservist-tim.png"
+            alt="Tim in reservistenuniform"
+            width={800}
+            height={1000}
+            className="w-full h-auto object-contain object-bottom"
+            priority
+          />
+        </div>
 
-          {/* Tekst in het midden */}
-          <div className="relative z-10 max-w-4xl mx-auto text-center">
+        {/* Tekst in het midden */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             DE SENIOR RESERVISTEN
           </h1>
@@ -42,7 +40,6 @@ export default function Home() {
           <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans">
             1 intentie, 0 pretenties.
           </p>
-          </div>
         </div>
       </section>
 
