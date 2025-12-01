@@ -51,13 +51,13 @@ export default async function Blog() {
               </h2>
               <div className={`mb-4 ${post.image ? 'flex gap-4' : ''}`}>
                 {post.image && (
-                  <div className="w-14 h-14 flex-shrink-0 relative rounded overflow-hidden">
+                  <div className="w-28 h-28 flex-shrink-0 relative rounded overflow-hidden">
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
                       className="object-cover"
-                      sizes="56px"
+                      sizes="112px"
                     />
                   </div>
                 )}
