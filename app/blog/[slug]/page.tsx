@@ -1,6 +1,7 @@
 import { getPostBySlug, getAllPostSlugs } from '@/lib/notion'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 
 // Revalidate elke 60 seconden voor verse content
@@ -47,20 +48,37 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           >
             ← Terug naar overzicht
           </Link>
-          <time className="block text-sm text-neutral-600 mt-4">
-            {post.date ? new Date(post.date).toLocaleDateString('nl-NL', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            }) : ''}
-          </time>
-          {post.author && (
-            <span className="text-sm text-neutral-500">Door {post.author}</span>
-          )}
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mt-2">
-            {post.title}
-          </h1>
-          <p className="text-xl text-neutral-700 mt-4">{post.summary}</p>
+          <div className={`mt-4 ${post.image ? 'flex flex-col md:flex-row gap-6' : ''}`}>
+            {post.image && (
+              <div className="w-full md:w-48 lg:w-56 flex-shrink-0">
+                <div className="relative aspect-square w-full rounded-lg overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 224px"
+                  />
+                </div>
+              </div>
+            )}
+            <div className="flex-1">
+              <time className="block text-sm text-neutral-600">
+                {post.date ? new Date(post.date).toLocaleDateString('nl-NL', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                }) : ''}
+              </time>
+              {post.author && (
+                <span className="text-sm text-neutral-500">Door {post.author}</span>
+              )}
+              <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mt-2">
+                {post.title}
+              </h1>
+              <p className="text-xl text-neutral-700 mt-4">{post.summary}</p>
+            </div>
+          </div>
         </header>
 
         <div

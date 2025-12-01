@@ -19,6 +19,7 @@ export interface BlogPost {
   author: string
   summary: string
   status: string
+  image?: string
 }
 
 export interface BlogPostWithContent extends BlogPost {
@@ -36,6 +37,13 @@ interface NotionRichText {
   }
 }
 
+interface NotionFile {
+  type: 'external' | 'file'
+  external?: { url: string }
+  file?: { url: string }
+  name?: string
+}
+
 interface NotionPage {
   id: string
   properties: {
@@ -45,6 +53,7 @@ interface NotionPage {
       rich_text?: NotionRichText[]
       date?: { start: string } | null
       select?: { name: string } | null
+      files?: NotionFile[]
     }
   }
 }
@@ -121,6 +130,18 @@ function blocksToHtml(blocks: NotionBlock[]): string {
   }).join('\n')
 }
 
+function getImageUrl(files?: NotionFile[]): string | undefined {
+  if (!files || files.length === 0) return undefined
+  const file = files[0]
+  if (file.type === 'external' && file.external?.url) {
+    return file.external.url
+  }
+  if (file.type === 'file' && file.file?.url) {
+    return file.file.url
+  }
+  return undefined
+}
+
 function pageToPost(page: NotionPage): BlogPost {
   const props = page.properties
   return {
@@ -137,6 +158,7 @@ function pageToPost(page: NotionPage): BlogPost {
       ? richTextToPlainText(props['Samenvatting'].rich_text)
       : '',
     status: props['Status']?.select?.name || '',
+    image: getImageUrl(props['Afbeelding']?.files),
   }
 }
 
