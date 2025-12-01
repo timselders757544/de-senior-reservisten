@@ -1,5 +1,6 @@
 import { getPublishedPosts } from '@/lib/notion'
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -48,7 +49,20 @@ export default async function Blog() {
                   {post.title}
                 </Link>
               </h2>
-              <p className="text-neutral-700 text-lg mb-4">{post.summary}</p>
+              <div className={`mb-4 ${post.image ? 'flex gap-4' : ''}`}>
+                {post.image && (
+                  <div className="w-14 h-14 flex-shrink-0 relative rounded overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      sizes="56px"
+                    />
+                  </div>
+                )}
+                <p className="text-neutral-700 text-lg flex-1">{post.summary}</p>
+              </div>
               <Link
                 href={`/blog/${post.slug}`}
                 className="text-accent hover:text-primary font-semibold transition-colors"
