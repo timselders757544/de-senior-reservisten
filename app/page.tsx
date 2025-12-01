@@ -65,8 +65,8 @@ export default function Home() {
           </p>
 
           <p className="text-xl font-semibold text-primary mt-8">
-            De vraag is niet of wij geschikt zijn. De vraag is of het systeem zichzelf toestaat
-            om ons te vinden.
+            De vraag is niet of ik geschikt ben. De vraag is of het systeem zichzelf toestaat
+            om mij te vinden.
           </p>
 
           <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4">
