@@ -48,6 +48,19 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           >
             ← Terug naar overzicht
           </Link>
+          <time className="block text-sm text-neutral-600 mt-4">
+            {post.date ? new Date(post.date).toLocaleDateString('nl-NL', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            }) : ''}
+          </time>
+          {post.author && (
+            <span className="text-sm text-neutral-500">Door {post.author}</span>
+          )}
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mt-2">
+            {post.title}
+          </h1>
           <div className={`mt-4 ${post.image ? 'flex flex-col md:flex-row gap-6' : ''}`}>
             {post.image && (
               <div className="w-full md:w-48 lg:w-56 flex-shrink-0">
@@ -62,22 +75,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 </div>
               </div>
             )}
-            <div className="flex-1">
-              <time className="block text-sm text-neutral-600">
-                {post.date ? new Date(post.date).toLocaleDateString('nl-NL', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                }) : ''}
-              </time>
-              {post.author && (
-                <span className="text-sm text-neutral-500">Door {post.author}</span>
-              )}
-              <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mt-2">
-                {post.title}
-              </h1>
-              <p className="text-xl text-neutral-700 mt-4">{post.summary}</p>
-            </div>
+            <p className="text-xl text-neutral-700 flex-1">{post.summary}</p>
           </div>
         </header>
 
