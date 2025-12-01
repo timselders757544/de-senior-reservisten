@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Neem contact op met De Senior Reservisten. Voor de pers, Defensie, medekandidaten of algemene vragen over de verkenning.',
+  description: 'Neem contact op met De Senior Reservist. Voor de pers, Defensie, medekandidaten of algemene vragen over de verkenning.',
 }
 
 export default function Contact() {
@@ -52,7 +52,7 @@ export default function Contact() {
 
         <p className="mt-6">
           <a
-            href="mailto:tim@timselders.nl?subject=Contact via De Senior Reservisten"
+            href="mailto:tim@timselders.nl?subject=Contact via De Senior Reservist"
             className="btn-primary inline-block"
           >
             Stuur me een e-mail

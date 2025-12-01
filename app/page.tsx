@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary to-primary-light text-white py-8 md:py-20 px-4 md:px-6 overflow-hidden min-h-[320px] md:min-h-[500px]">
         {/* Linker figuur - burger Tim - half zichtbaar op mobiel */}
-        <div className="absolute bottom-0 -left-[80px] w-[280px] md:left-[calc(50%-630px)] md:w-[336px] lg:w-[420px]">
+        <div className="absolute bottom-0 -left-[80px] w-[260px] md:left-[calc(50%-630px)] md:w-[336px] lg:w-[420px]">
           <Image
             src="/images/burger-tim.png"
             alt="Tim in burgerkledij"
@@ -18,7 +18,7 @@ export default function Home() {
         </div>
 
         {/* Rechter figuur - reservist Tim - half zichtbaar op mobiel */}
-        <div className="absolute bottom-0 -right-[80px] w-[280px] md:right-[calc(50%-630px)] md:w-[336px] lg:w-[420px]">
+        <div className="absolute bottom-0 -right-[80px] w-[260px] md:right-[calc(50%-630px)] md:w-[336px] lg:w-[420px]">
           <Image
             src="/images/reservist-tim.png"
             alt="Tim in reservistenuniform"
@@ -32,7 +32,7 @@ export default function Home() {
         {/* Tekst in het midden */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            DE SENIOR RESERVISTEN
+            DE SENIOR RESERVIST
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-snug">
             100.000 open vacatures,<br />

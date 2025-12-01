@@ -17,14 +17,14 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: {
-    default: 'De Senior Reservisten - Het Experiment',
-    template: '%s | De Senior Reservisten',
+    default: 'De Senior Reservist - Het Experiment',
+    template: '%s | De Senior Reservist',
   },
   description: '100.000 open vacatures, 1 man op leeftijd, 1 intentie, 0 pretenties. Live documentatie van een 55+ professional in het wervingsproces van Defensie.',
   keywords: ['Defensie', 'werving', 'leeftijdsdiscriminatie', '55 plus', 'reservisten', 'personeelstekort', 'experiment'],
-  authors: [{ name: 'De Senior Reservisten' }],
+  authors: [{ name: 'De Senior Reservist' }],
   openGraph: {
-    title: 'De Senior Reservisten - Het Experiment',
+    title: 'De Senior Reservist - Het Experiment',
     description: '100.000 open vacatures, 1 man op leeftijd, 1 intentie, 0 pretenties.',
     type: 'website',
     locale: 'nl_NL',
@@ -42,7 +42,7 @@ export default function RootLayout({
         <header className="bg-primary text-white py-3 md:py-4 px-4 md:px-6 relative">
           <nav className="max-w-6xl mx-auto flex justify-between items-center">
             <a href="/" className="font-sans text-base md:text-xl font-bold hover:text-accent transition">
-              DE SENIOR RESERVISTEN
+              DE SENIOR RESERVIST
             </a>
             <MobileNav />
           </nav>
@@ -50,7 +50,7 @@ export default function RootLayout({
         <main className="bg-neutral-100">{children}</main>
         <footer className="bg-primary-light text-white py-8">
           <div className="max-w-6xl mx-auto px-6 text-center">
-            <p className="font-sans text-sm">DE SENIOR RESERVISTEN</p>
+            <p className="font-sans text-sm">DE SENIOR RESERVIST</p>
             <p className="text-neutral-300 text-xs mt-1">© 2025</p>
           </div>
         </footer>
