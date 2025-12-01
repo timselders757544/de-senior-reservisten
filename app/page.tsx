@@ -4,9 +4,9 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-primary to-primary-light text-white py-8 md:py-20 px-4 md:px-6 overflow-hidden md:min-h-[500px]">
-        {/* Linker figuur - burger Tim - uitgelijnd aan onderkant section */}
-        <div className="hidden md:block absolute bottom-0 left-[calc(50%-630px)] w-[336px] lg:w-[420px]">
+      <section className="relative bg-gradient-to-b from-primary to-primary-light text-white py-8 md:py-20 px-4 md:px-6 overflow-hidden min-h-[320px] md:min-h-[500px]">
+        {/* Linker figuur - burger Tim - half zichtbaar op mobiel */}
+        <div className="absolute bottom-0 -left-[100px] w-[200px] md:left-[calc(50%-630px)] md:w-[336px] lg:w-[420px]">
           <Image
             src="/images/burger-tim.png"
             alt="Tim in burgerkledij"
@@ -17,8 +17,8 @@ export default function Home() {
           />
         </div>
 
-        {/* Rechter figuur - reservist Tim - uitgelijnd aan onderkant section */}
-        <div className="hidden md:block absolute bottom-0 right-[calc(50%-630px)] w-[336px] lg:w-[420px]">
+        {/* Rechter figuur - reservist Tim - half zichtbaar op mobiel */}
+        <div className="absolute bottom-0 -right-[100px] w-[200px] md:right-[calc(50%-630px)] md:w-[336px] lg:w-[420px]">
           <Image
             src="/images/reservist-tim.png"
             alt="Tim in reservistenuniform"
