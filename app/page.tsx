@@ -35,7 +35,7 @@ export default function Home() {
             DE SENIOR RESERVISTEN
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-snug">
-            150.000 open vacatures,<br />
+            100.000 open vacatures,<br />
             2 mannen op leeftijd,<br />
             1 intentie, 0 pretenties.
           </p>
