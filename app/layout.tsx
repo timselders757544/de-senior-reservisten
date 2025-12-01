@@ -51,7 +51,7 @@ export default function RootLayout({
         <footer className="bg-primary-light text-white py-8">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <p className="font-sans text-sm">DE SENIOR RESERVISTEN</p>
-            <p className="text-neutral-300 text-xs mt-4">© 2025</p>
+            <p className="text-neutral-300 text-xs mt-1">© 2025</p>
           </div>
         </footer>
       </body>
