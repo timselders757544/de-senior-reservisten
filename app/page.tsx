@@ -36,7 +36,7 @@ export default function Home() {
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl text-neutral-200 font-sans leading-snug">
             100.000 open vacatures,<br />
-            2 mannen op leeftijd,<br />
+            1 man op leeftijd,<br />
             1 intentie, 0 pretenties.
           </p>
         </div>
@@ -45,17 +45,17 @@ export default function Home() {
       {/* Main Content */}
       <section className="container-content">
         <div className="prose prose-base md:prose-lg max-w-none">
-          <h2 className="text-primary">Defensie zoekt mensen. Wij melden ons.</h2>
+          <h2 className="text-primary">Defensie zoekt mensen. Ik meld me.</h2>
 
           <p>
-            Niet als helden, niet als experts, niet als ideale kandidaten. Wel als twee
-            professionals van 55+ die willen weten: herkent een systeem dat schreeuwt om
+            Niet als held, niet als expert, niet als ideale kandidaat. Wel als een
+            professional van 55+ die wil weten: herkent een systeem dat schreeuwt om
             vernieuwing ook vernieuwers als ze aanbellen?
           </p>
 
           <p>
-            Dit is geen klacht en geen kruistocht. Dit is een live experiment. Wij documenteren
-            wat er gebeurt als onwaarschijnlijke kandidaten het wervingsproces ingaan — de
+            Dit is geen klacht en geen kruistocht. Dit is een live experiment. Ik documenteer
+            wat er gebeurt als een onwaarschijnlijke kandidaat het wervingsproces ingaat — de
             formulieren, de gesprekken, de stiltes, de absurditeiten.
           </p>
 
@@ -74,7 +74,7 @@ export default function Home() {
               Naar de verkenning
             </a>
             <a href="/over" className="btn-primary bg-primary-light hover:bg-primary">
-              Over ons
+              Over mij
             </a>
           </div>
         </div>

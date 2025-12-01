@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'De verkenning',
-  description: 'Twee professionals van 55+ gaan het wervingsproces van Defensie in. Live documentatie van wat we tegenkomen — ongefiltreerd en transparant.',
+  description: 'Een professional van 55+ gaat het wervingsproces van Defensie in. Live documentatie van wat ik tegenkom — ongefiltreerd en transparant.',
 }
 
 // Revalidate elke 60 seconden voor verse content
@@ -19,8 +19,8 @@ export default async function Blog() {
       <div className="prose prose-lg max-w-none">
         <h1 className="text-primary">De verkenning</h1>
         <p className="text-xl text-neutral-700">
-          Twee professionals van 55+ gaan het wervingsproces van Defensie in.
-          Dit is een live documentatie van wat we tegenkomen — ongefiltreerd en transparant.
+          Een professional van 55+ gaat het wervingsproces van Defensie in.
+          Dit is een live documentatie van wat ik tegenkom — ongefiltreerd en transparant.
         </p>
       </div>
 
