@@ -4,8 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 
-// Revalidate elke 60 seconden voor verse content
-export const revalidate = 60
+// Revalidate elke 30 minuten voor verse content
+export const revalidate = 1800
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params

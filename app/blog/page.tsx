@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description: 'Een professional van 55+ gaat het wervingsproces van Defensie in. Live documentatie van wat ik tegenkom — ongefiltreerd en transparant.',
 }
 
-// Revalidate elke 60 seconden voor verse content
-export const revalidate = 60
+// Revalidate elke 30 minuten voor verse content
+export const revalidate = 1800
 
 export default async function Blog() {
   const posts = await getPublishedPosts()
