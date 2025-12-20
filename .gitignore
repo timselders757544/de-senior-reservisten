@@ -32,3 +32,4 @@ yarn-error.log*
 *.psd
 *.sketch
 *.ai
+next-env.d.ts
