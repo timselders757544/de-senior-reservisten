@@ -174,6 +174,7 @@ export async function getPublishedPosts(): Promise<BlogPost[]> {
       },
       sorts: [{ property: 'Datum', direction: 'descending' }],
     }),
+    next: { revalidate: 1800 }, // 30 minuten - sync met page revalidate
   })
 
   if (!response.ok) {
@@ -197,6 +198,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPostWithContent |
         ],
       },
     }),
+    next: { revalidate: 1800 }, // 30 minuten
   })
 
   if (!response.ok) {
@@ -213,6 +215,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPostWithContent |
   // Haal blocks op voor content
   const blocksResponse = await fetch(`${NOTION_API_URL}/blocks/${page.id}/children`, {
     headers: notionHeaders,
+    next: { revalidate: 1800 }, // 30 minuten
   })
 
   if (!blocksResponse.ok) {
