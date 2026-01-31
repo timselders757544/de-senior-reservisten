@@ -1,7 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Removed 'output: export' - nu server-side rendering voor Notion integratie
-  images: { unoptimized: true },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.amazonaws.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.notion.so',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
